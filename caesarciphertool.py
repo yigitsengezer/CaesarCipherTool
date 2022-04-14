@@ -1,8 +1,6 @@
 import argparse
 from termcolor import colored
 
-
-
 parser = argparse.ArgumentParser(description='Crypt or decrypt a text with Caesar Cipher.')
 parser.add_argument('-c', '--crypt', help='Text to crypt.', required=False)
 parser.add_argument('-d', '--decrypt', help='Text to decrypt.', required=False)
