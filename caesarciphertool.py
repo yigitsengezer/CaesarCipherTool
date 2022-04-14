@@ -1,4 +1,8 @@
 import argparse
+from termcolor import colored
+
+
+
 parser = argparse.ArgumentParser(description='Crypt or decrypt a text with Caesar Cipher.')
 parser.add_argument('-c', '--crypt', help='Text to crypt.', required=False)
 parser.add_argument('-d', '--decrypt', help='Text to decrypt.', required=False)
@@ -38,24 +42,24 @@ if __name__ == '__main__':
     elif args.decrypt:
         plainText = args.decrypt
     else:
-        plainText = input("Enter text to crypt or decrypt: ")
+        plainText = input(colored("Enter text to crypt or decrypt: ", 'green'))
 
     if args.key:
         key = args.key
     else:
-        key = int(input("Enter key: "))
+        key = int(input(colored("Enter key: ", 'green')))
 
     if args.crypt:
         encryptedText = caesar_cipher(plainText, key)
-        print("Encrypted text: " + encryptedText)
+        print(colored("Encrypted text: ", 'red') + encryptedText)
     elif args.decrypt:
         decryptedText = caesar_decipher(plainText, key)
-        print("Decrypted text: " + decryptedText)
+        print(colored("Decrypted text: ", 'red') + decryptedText)
     else:
-        isCrypt = input("Do you want to crypt or decrypt? (C/d): ")
+        isCrypt = input(colored("Do you want to", 'green') + colored(" crypt ", 'red') + colored("or", 'green') + colored(" decrypt", 'red') + colored("? [C/d] ", 'green'))
         if isCrypt == "c" or isCrypt == "C" or isCrypt == "":
             encryptedText = caesar_cipher(plainText, key)
-            print("Encrypted text: " + encryptedText)
+            print(colored("\nEncrypted text: ", 'red') + encryptedText)
         else:
             decryptedText = caesar_decipher(plainText, key)
-            print("Decrypted text: " + decryptedText)
+            print(colored("\nDecrypted text: ", 'red') + decryptedText)
