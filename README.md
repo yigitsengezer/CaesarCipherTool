@@ -1,4 +1,4 @@
 # CaesarCipherTool
 Simple tool to encrypt and decrypt text with a caesar cipher.
 
-<p align="center"><img src="/img/demo.gif?raw=true"/></p>
+<p align="center"><img src="/blob/master/Img/demo.gif?raw=true"/></p>
