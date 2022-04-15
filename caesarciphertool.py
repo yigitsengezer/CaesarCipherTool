@@ -49,10 +49,10 @@ if __name__ == '__main__':
 
     if args.crypt:
         encryptedText = caesar_cipher(plainText, key)
-        print(colored("Encrypted text: ", 'red') + encryptedText)
+        print(colored("\nEncrypted text: ", 'red') + encryptedText)
     elif args.decrypt:
         decryptedText = caesar_decipher(plainText, key)
-        print(colored("Decrypted text: ", 'red') + decryptedText)
+        print(colored("\nDecrypted text: ", 'red') + decryptedText)
     else:
         isCrypt = input(colored("Do you want to", 'green') + colored(" crypt ", 'red') + colored("or", 'green') + colored(" decrypt", 'red') + colored("? [C/d] ", 'green'))
         if isCrypt == "c" or isCrypt == "C" or isCrypt == "":
